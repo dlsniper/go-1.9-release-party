@@ -2,8 +2,8 @@ Go 1.9 Release Party
 Go London User Group
 12 Sep 2017
 
-Florin Pățan
-@dlsniper
+London Gophers
+@GoLondonUserGrp
 
 * License and Materials
 
@@ -75,9 +75,9 @@ As always, the changes are so general and varied that precise statements about p
 
 Most programs should run a bit faster, due to speedups in the garbage collector and optimizations in the standard library.
 
-Do you have a Go 1.9 performance story to tell? Blog it, and I'll retweet the crap out of it.
+Do you have a Go 1.9 performance story to tell? Blog it, and I (and Dave Cheney) will retweet the crap out of it.
 
-* Garbage collector specific 
+* Garbage collector specific
 
 - Library functions that used to trigger stop-the-world garbage collection now trigger concurrent garbage collection. Specifically, `runtime.GC`, `debug.SetGCPercent`, and `debug.FreeOSMemory`, now trigger concurrent garbage collection, blocking only the calling goroutine until the garbage collection is done.
 - The `debug.SetGCPercent` function only triggers a garbage collection if one is immediately necessary because of the new `GOGC` value. This makes it possible to adjust `GOGC` on-the-fly.
